@@ -43,8 +43,8 @@ const ProductScreen = () => {
   return (
     <div className='px-[3rem]'>
       <div className='flex items-center h-[5rem] m-auto'>
-        <a className='font-[Satoshi] text-[20px]  font-[500] leading-[40px]' href='/home'>Home/</a>
-        <a className='font-[Satoshi] text-[20px]  font-[500] leading-[40px]' href='/marketplace'>Marketplace/</a>
+        <Link className='font-[Satoshi] text-[20px]  font-[500] leading-[40px]' href='/home'>Home/</Link>
+        <Link className='font-[Satoshi] text-[20px]  font-[500] leading-[40px]' href='/marketplace'>Marketplace/</Link>
         <p className='font-[Satoshi] text-[20px]  font-[500] leading-[40px]'>Editorial/{product.slug}</p>
       </div>
       <div className='flex gap-4 m-auto justify-between h-[38rem] border border-1 border-[black]'>
