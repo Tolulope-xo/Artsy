@@ -5,9 +5,8 @@ import Image from 'next/image';
 interface ProductType {
   picture: any, price: number
 }
-const ProductItem = ({ product }: ProductType) => {
+const ProductItem = ({ product }) => {
   const [quantity, setQuantity] = useState(0)
-  const [count, setCount] = useState()
 
   return (
     <div key={product.price}>
