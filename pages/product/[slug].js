@@ -4,6 +4,7 @@ import { allProducts } from '../../components/assets/utils'
 import { MdOutlineKeyboardArrowDown } from 'react-icons/md';
 import { IoIosArrowUp } from 'react-icons/io';
 import Link from 'next/link';
+import useToggle from '../../hooks/useToggle'
 import { useDispatch } from 'react-redux';
 import { addToCart } from '../../redux/cart.slice';
 import { AiOutlineHeart } from 'react-icons/ai'
@@ -17,21 +18,15 @@ import Image from 'next/image';
 const ProductScreen = () => {
   const dispatch = useDispatch();
 
-  const [toggle, setToggle] = useState(false)
-  const handleToggle = () => {
-    setToggle(!toggle);
-  };
+  const [toggle, handleToggle] = useToggle()
+ 
 
   const [count, setCount] = useState(0)
   const incNum = () => {
-    if (count < 100) {
-      setCount(Number(count) + 1);
-    }
+   setCount(count+1)
   };
   const decNum = () => {
-    if (count > 0) {
-      setCount(count - 1);
-    }
+    setCount(count-1)
   }
 
   const { query } = useRouter()

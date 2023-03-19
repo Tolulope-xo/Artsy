@@ -12,16 +12,18 @@ module.exports = {
       'color3': 'rgba(192, 86, 9, 0.49)',
     },
     animation: {
-      'fade': 'fade 20s infinite',
+      'fade': 'fade 10s infinite',
 
+    },
+    opacity: {
+      '0': '0',
     },
     keyframes: {
       fade: {
-        '0%': {  opacity: 1},
-        '13.3%': {  opacity: 1},
-        '33.3%': {  opacity: 0 },
-        '80%': {  opacity: 0},
-        '100%': {  opacity: 1 },
+        '0%': {  opacity: 0},
+        '33.3%': {  opacity: 1 },
+        '66.66%': {  opacity: 0},
+        '100%': {  opacity: 0 },
       },
     },
    

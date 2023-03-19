@@ -38,7 +38,7 @@ export const tabsdata = [
 export const allProducts = [
     {
         id: 1,
-        title: 'PHILOMENA ‘22',
+        title: 'Philomena ‘22',
         picture: philomena,
        price: 3.90,
        slug: 'philomena_22',
@@ -46,7 +46,7 @@ export const allProducts = [
 
     {
         id: 2,
-        title: 'BOOLEAN EGYPTIAN',
+        title: 'Boolean Egyptian',
         picture: egypt,
        price: 3.90,
        slug: 'boolean_egyptian',
@@ -54,7 +54,7 @@ export const allProducts = [
     },
     {
         id: 3,
-        title: 'BLANC',
+        title: 'Blanc',
         picture: cap,
        price: 3.90,
        slug: 'blanc',
@@ -62,7 +62,7 @@ export const allProducts = [
     },
     {
         id: 4,
-        title: 'ELLIPSIA',
+        title: 'Ellipsia',
         picture: camera,
        price: 3.90,
        slug: 'ellipsia',
@@ -70,7 +70,7 @@ export const allProducts = [
     },
     {
         id: 5,
-        title: 'THE LAWMAKERS ',
+        title: 'The lawmakers',
         picture: archaic,
        price: 3.90,
        slug: 'the_lawmakers',
@@ -79,7 +79,7 @@ export const allProducts = [
     },
     {
         id: 6,
-        title: 'VEIL',
+        title: 'Veil',
         picture: shades,
        price: 3.90,
        slug: 'veil',
@@ -87,7 +87,7 @@ export const allProducts = [
     },
     {
         id: 7,
-        title: 'ALTERNATING',
+        title: 'Alternating',
         picture: hand,
        price: 3.90,
        slug: 'alternating',
@@ -95,7 +95,7 @@ export const allProducts = [
     },
     {
         id: 8,
-        title: 'ROSEMARY ‘22',
+        title: 'Rosemary ‘22',
         picture: smileee,
        price: 3.90,
        slug: 'rosemary_22',
@@ -103,7 +103,7 @@ export const allProducts = [
     },
     {
         id: 9,
-        title: 'BEVERLY',
+        title: 'Beverly',
         picture: vegetation,
        price: 3.90,
        slug: 'beverly',

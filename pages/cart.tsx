@@ -1,29 +1,16 @@
 import Image from 'next/image';
 import React, { useEffect, useRef, useState } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-// Importing actions from  cart.slice.js
-import {
-  incrementQuantity,
-  decrementQuantity,
-  removeFromCart,
-} from '../redux/cart.slice';
 import { GiCancel } from 'react-icons/gi'
-import ProductItem from '../components/Productitem';
+import ProductItem from '../components/ProductItem';
+import Total from '../components/Total';
+import Total2 from '../components/Total2';
+import Information from '../components/Information';
 
 const Cart = () => {
-  const getItemsCount = () => {
-    return cart.reduce((accumulator, item) => accumulator + item.quantity, 0);
-  };
   const [nextField, setNextField] = useState('tab_1')
   const cart = useSelector((state) => state.cart);
   const dispatch = useDispatch();
-
-  const getTotalPrice = () => {
-    return cart.reduce(
-      (accumulator, product) => accumulator + product.quantity * product.price,
-      0
-    );
-  };
 
   return (
     <div>
@@ -49,25 +36,31 @@ const Cart = () => {
             <>
               {cart.map((product, key) => (
                 <div key={key}>
-               <ProductItem product={product}/>
-               </div>
+                  <ProductItem product={product} />
+                </div>
               ))}
+              <Total />
             </>
 
           )}
-          {/* {cart.map((product, key) => (
-            <div key={key}>
-              <div>
-                <button>Proceed to checkout</button>
-                <p>Continue shopping</p>
+
+        </div>
+
+      }
+
+      {nextField === 'tab_2' &&
+        <div className='flex mt-[3rem] flex-row gap-[2rem] w-[100%] max-w-[100%]'>
+          <Information />
+          <div className='mx-[3rem] w-[100%] max-w-[50%] m-auto border-[#747474] border-t-[1px]'>
+            {cart.map((product, key) => (
+              <div key={key}>
+                <ProductItem product={product} />
               </div>
-              <div>
-                <p>Products in cart: {product.quantity} items</p>
-                <p>{product.shipping}</p>
-                <p>${product.quantity * product.price }</p>
-              </div>
-            </div>
-          ))} */}
+            ))}
+            <Total2 />
+          </div>
+
+
 
         </div>
 

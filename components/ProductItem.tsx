@@ -1,12 +1,10 @@
 import React, { useState } from 'react';
 import { GiCancel } from 'react-icons/gi'
 import Image from 'next/image';
-
-interface ProductType {
-  picture: any, price: number
-}
-const ProductItem = ({ product }) => {
-  const [quantity, setQuantity] = useState(0)
+import { incrementQuantity, decrementQuantity, removeFromCart } from '../redux/cart.slice';
+import { useDispatch } from 'react-redux';
+const ProductItem = ({ product, id }) => {
+  const dispatch = useDispatch();
 
   return (
     <div key={product.price}>
@@ -22,21 +20,21 @@ const ProductItem = ({ product }) => {
                 <p className='font-[Satoshi] font-[500] text-[24px] leading-[30px] text-[#292929]'>200 ft</p>
               </div>
               <div className='flex gap-[1rem] font-[Satoshi] font-[500] text-[24px] leading-[40px] text-[#292929]'>
-                <button onClick={() => setQuantity(product.quantity - 1)}>
+                <button onClick={() => dispatch(decrementQuantity(product.id))}>
                   -
                 </button>
                 <p>{product.quantity}</p>
-                <button onClick={() => setQuantity(product.quantity + 1)}>
+                <button onClick={() => dispatch(incrementQuantity(product.id))}>
                   +
                 </button>
               </div>
             </div>
           </div>
 
-          <div className=''>
-            {/* <button onClick={() => dispatch(removeFromCart(product.id))}>
+          <div className='flex-col justify-between flex'>
+            <button onClick={() => dispatch(removeFromCart(product.id))}>
                         <GiCancel className='text-[34px] leading-[30px] text-[#888888]' />
-                      </button> */}
+                      </button>
             <p className='font-[Cardo] font-[400] text-[36px] leading-[45px] text-[#292929]'>${product.quantity * product.price}</p>
           </div>
 

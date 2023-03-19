@@ -28,9 +28,9 @@ const Creators = () => {
             <h2 className='font-[Clash] font-[700] text-[70px] md:text-[150px] line-through leading-[180.5px]'>1985</h2> 
             </div>
             <div className='absolute block w-[100%] max-w-[15rem] md:max-w-[30rem] h-[15rem] md:h-[30rem] my-0 mx-auto top-[1rem] md:top-[-9rem] right-[5rem] md:right-[16rem]'>
-            <Image className='delay-[0s] absolute left-0 w-[100%] h-[100%] bg-cover bg-center bg-no-repeat animate-fade' src={beardsmall} alt='beard1'/>
-            <Image className='delay-[5s] absolute left-0 w-[100%] h-[100%] bg-cover bg-center bg-no-repeat animate-fade' src={girlie} alt='girl'/>
-            <Image className='delay-[20s] absolute left-0 w-[100%] h-[100%] bg-cover bg-center bg-no-repeat animate-fade' src={beardFrown} alt='beard2'/>
+            <Image className='delay-1000 absolute left-0 w-[100%] h-[100%] bg-cover bg-center bg-no-repeat animate-fade' src={beardsmall} alt='beard1'/>
+            <Image className='delay-2000 absolute left-0 w-[100%] h-[100%] bg-cover bg-center bg-no-repeat animate-fade' src={girlie} alt='girl'/>
+            <Image className='delay-3000 absolute left-0 w-[100%] h-[100%] bg-cover bg-center bg-no-repeat animate-fade' src={beardFrown} alt='beard2'/>
             </div>
             </div>
         </div>
