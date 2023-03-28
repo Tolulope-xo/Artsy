@@ -23,6 +23,23 @@ const Carousel1 = () => {
       pagination={{
         clickable: true,
       }}
+      breakpoints={{
+        370: {
+            slidesPerView: 1,
+            spaceBetween: 20,
+          },
+        // when window width is >= 640px
+        640: {
+          slidesPerView: 2,
+          spaceBetween: 20,
+        },
+        // when window width is >= 768px
+        768: {
+          slidesPerView: 3,
+          spaceBetween: 20,
+        },
+       
+    }}
       navigation={true}
       modules={[Pagination, Navigation]}
       className="pl-[2rem]"

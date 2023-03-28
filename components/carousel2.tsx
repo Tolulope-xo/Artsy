@@ -12,17 +12,35 @@ import { Items } from './assets/utils';
 const Carousel2 = () => {
     return (
         <Swiper
-            slidesPerView={3}
-            spaceBetween={10}
-            slidesPerGroup={1}
-            loop={true}
-            loopFillGroupWithBlank={false}
-            pagination={{
-                clickable: true,
-            }}
-            
-            modules={[Pagination, Navigation]}
-            className="pl-[2rem] w-full"
+        slidesPerView={3}
+        spaceBetween={10}
+        slidesPerGroup={3}
+        loop={true}
+        loopFillGroupWithBlank={false}
+        pagination={{
+          clickable: true,
+        }}
+        breakpoints={{
+          370: {
+              slidesPerView: 1,
+              spaceBetween: 20,
+            },
+          // when window width is >= 640px
+          640: {
+            slidesPerView: 2,
+            spaceBetween: 20,
+          },
+          // when window width is >= 768px
+          768: {
+            slidesPerView: 3,
+            spaceBetween: 20,
+          },
+         
+      }}
+        navigation={true}
+        modules={[Pagination, Navigation]}
+        className="pl-[2rem]"
+      >
         >
             <SwiperSlide>
                 <div className='mt-[3rem] relative w-[25rem] bg-[white] p-[20px] flex flex-col'>

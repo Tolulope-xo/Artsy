@@ -12,7 +12,9 @@ import one from './Rectangle 254.png'
 import two from './Rectangle 256.png'
 import three from './Rectangle 258.png'
 import four from './Rectangle 260.png'
-
+import first from './Rectangle 247.png'
+import second from './Rectangle 245.png'
+import third from './Rectangle 246.png'
 export const tabsdata = [
     {
         id: 1,
@@ -134,9 +136,28 @@ export const Items = [
        name: 'Bianca',
     },
     {
-        id: 3,
+        id: 4,
         picture: four,
        price: '0.20',
        name: 'Casa',
+    },
+]
+
+export const Items1 = [
+    {
+        id: 1,
+        picture: first,
+       time: '6hr : 40mins: 15s',
+    },
+
+    {
+        id: 2,
+        picture: second,
+        time: '6hr : 40mins: 15s',
+    },
+    {
+        id: 3,
+        picture: third,
+        time: '6hr : 40mins: 15s',
     },
 ]

@@ -10,7 +10,7 @@ const Total = () => {
         let totalShipping = 2
         cart.forEach(product => {
             totalQuantity += product.quantity
-            totalShipping += 2 * product.quantity
+            totalShipping
             totalPrice += product.price * product.quantity + totalShipping
         })
         return { totalPrice, totalQuantity, totalShipping }
