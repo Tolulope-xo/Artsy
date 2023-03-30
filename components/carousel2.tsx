@@ -41,7 +41,6 @@ const Carousel2 = () => {
         modules={[Pagination, Navigation]}
         className="pl-[2rem]"
       >
-        >
             <SwiperSlide>
                 <div className='mt-[3rem] relative w-[25rem] bg-[white] p-[20px] flex flex-col'>
                     <Image src={first} alt='products' />
