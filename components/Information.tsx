@@ -6,7 +6,10 @@ import countryList from 'react-select-country-list'
 import { collection, addDoc } from "firebase/firestore";
 
 import { db } from '../firebase';
-const Information = () => {
+interface Props {
+    country: string;
+  }
+  const Information: React.FC<Props> = () => {
     const [name, setName] = useState('')
     const [email, setEmail] = useState('')
     const [code, setCode] = useState()
